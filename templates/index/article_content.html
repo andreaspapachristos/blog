@@ -1,0 +1,18 @@
+{% load static %}
+{% block article_content %}
+    {% for post in posts %}
+                        <article class="content__item">
+							<span class="category category--full">{{ post.category }}</span>
+							<h2 class="title title--full">{{ post.title }}</h2>
+							<div class="meta meta--full">
+								<img class="meta__avatar" src='{{ post.author.profile.image.url }}'/>
+								<span class="meta__author">{{ post.author }}</span>
+								<span class="meta__date"><i class="fa fa-calendar-o"></i> {{ post.date_posted|date}}</span>
+								<span class="meta__reading-time"><i class="fa fa-clock-o"></i> {{ post.time_read }} λεπτά ανάγνωση</span>
+							</div>
+
+                            {{ post.content | linebreaks}}
+							<p>Επικοινωνήστε με τον συγγραφέα <a href="mailto:{{ post.email }}"> &nbsp;{{  post.email }}&nbsp; </a>  by  {{ post.author }}.</p>
+						</article>
+    {% endfor %}
+{% endblock article_content %}

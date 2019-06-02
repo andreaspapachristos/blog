@@ -1,0 +1,17 @@
+{% extends 'index/base.html' %}
+{% load static %}
+{% block article %}
+  {% for post in posts %}
+                    <a class="grid__item" href="#">
+						<h2 class="title title--preview">{{ post.title }}</h2>
+						<div class="loader"></div>
+						<span class="category">{{ post.category }}</span>
+						<div class="meta meta--preview">
+							<img class="meta__avatar" src='{{ post.author.profile.image.url }}'/>
+							<span class="meta__date"><i class="fa fa-calendar-o"></i> {{ post.date_posted | date}}</span>
+							<span class="meta__reading-time"><i class="fa fa-clock-o"></i> {{ post.time_read }} λεπτά ανάγνωση</span>
+						</div>
+					</a>
+
+    {% endfor %}
+{% endblock  %}
