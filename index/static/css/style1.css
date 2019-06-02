@@ -1,4 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Playfair+Display+SC:400italic,700,900|Raleway:500|Martel+Sans:400,700);
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
 /*
 @font-face {
   font-weight: normal;
@@ -346,7 +348,8 @@ button:focus {
 .title {
   margin: 0;
   font-size: 1.875em;
-  font-family: "Playfair Display", serif;
+ /* font-family: "Playfair Display", serif;*/
+  font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
 }
 
@@ -398,7 +401,8 @@ button:focus {
   position: relative;
   font-size: 0.95em;
   font-style: italic;
-  font-family: "Playfair Display", serif;
+ /* font-family: "Playfair Display", serif;*/
+  font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
   display: block;
 }
@@ -692,7 +696,8 @@ button:focus {
   font-style: italic;
   float: left;
   margin: 0 5px;
-  font-family: "Playfair Display", serif;
+ /* font-family: "Playfair Display", serif;*/
+  font-family: 'Source Sans Pro', sans-serif;
 }
 .meta--full .meta__category::before {
   content: "in ";
