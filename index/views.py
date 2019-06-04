@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 from .models import Post
 from django.shortcuts import render
 from django.contrib.auth.models import User
+import docx2txt, logging
 
 # Create your views here.
 
