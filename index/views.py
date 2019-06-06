@@ -24,3 +24,8 @@ class PostListView(ListView):
 
 
 
+class PostListView(ListView):
+    model = Post
+    template_name = 'index/article.html'
+    context_object_name = 'posts'
+    ordering = ['-date_posted']
