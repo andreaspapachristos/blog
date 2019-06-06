@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 from .models import Post
 from django.shortcuts import render
+from django.views.generic import ListView
 from django.contrib.auth.models import User
 
 # Create your views here.
@@ -13,3 +14,13 @@ def home(request):
     }
 
     return render(request, 'index/article.html', context)
+
+
+class PostListView(ListView):
+    model = Post
+    template_name = 'index/article.html'
+    context_object_name = 'posts'
+    ordering = ['-date_posted']
+
+
+
