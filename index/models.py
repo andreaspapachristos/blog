@@ -18,3 +18,11 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_file(self):
+        f = open('test', 'r')
+        post = Post.objects.create(author=self.model.author)
+        #post.author = f.readline()
+        post.category = f.readline()
+        post.content = f.readline()
+        super.save()

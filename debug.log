@@ -1,9 +1,0 @@
-Watching for file changes with StatReloader
-/home/master/PycharmProjects/blog/index/models.py changed, reloading.
-Watching for file changes with StatReloader
-/home/master/PycharmProjects/blog/index/views.py changed, reloading.
-Watching for file changes with StatReloader
-Watching for file changes with StatReloader
-"GET / HTTP/1.1" 200 7773
-"GET /static/css/normalize.css HTTP/1.1" 200 1825
-"GET /static/fonts/font-awesome-4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0 HTTP/1.1" 200 8192
