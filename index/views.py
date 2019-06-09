@@ -23,12 +23,7 @@ class PostListView(ListView):
     ordering = ['-date_posted']
 
 
-class CreatePost(CreateView):
-    model = Post
 
-    def readFile(self, model):
-        model.instance.author = self.request.user
-        return super().readFile(model)
 
 
 
