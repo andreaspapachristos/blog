@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 from .models import Post
 from django.shortcuts import render
 from django.views.generic import ListView, CreateView
-from django.contrib.auth import models
+from django.contrib.auth.models import  User
 
 # Create your views here.
 
