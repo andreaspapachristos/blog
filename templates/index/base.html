@@ -10,10 +10,12 @@
 		<meta name="description" content="Another perfect job from Codrops, that i use for front-end" />
 		<meta name="keywords" content="grid, layout, effect, animated, responsive, magazine, template, web design" />
 		<meta name="author" content="Codrops" />
-		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="shortcut icon" href={% static "img/favicon.ico" %}>
 		<link rel="stylesheet" type="text/css" href='{% static "css/normalize.css"%}' />
 		<link rel="stylesheet" type="text/css" href='{% static "fonts/font-awesome-4.3.0/css/font-awesome.min.css"  %}'/>
 		<link rel="stylesheet" type="text/css" href='{% static "css/style1.css" %}' />
+        <link rel="stylesheet" type="text/css" href='{% static "css/style3.css" %}' />
+        <link rel="stylesheet" type="text/css" href='{% static "css/demo.css" %}' />
 		<script src='{% static "js/modernizr.custom.js" %}'></script>
 	</head>
 	<body>
@@ -29,7 +31,7 @@
 -->
 				<div class="related">
 					<h3>Related Demos</h3>
-					<a href="http://tympanus.net/Development/BookPreview/">Book Preview</a>
+					<p><button id="trigger-overlay" type="button">Open Overlay</button></p>
 					<a href="http://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/">Thumbnail Grid</a>
 					<a href="http://tympanus.net/Development/3DGridEffect/">3D Grid Effect</a>
 				</div>
@@ -59,7 +61,21 @@
 				</section>
 			</div>
 		</div><!-- /container -->
+        <!--modal -->
+           <div class="overlay overlay-slidedown">
+			<button type="button" class="overlay-close">Close</button>
+			<nav>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Work</a></li>
+					<li><a href="#">Clients</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
 		<script src='{% static "js/classie.js" %}'></script>
 		<script src='{% static "js/main.js" %}'></script>
+        <script src='{% static "js/demo1.js" %}'></script>
 	</body>
 </html>
