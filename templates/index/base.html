@@ -62,18 +62,14 @@
 			</div>
 		</div><!-- /container -->
         <!--modal -->
-           <div class="overlay overlay-slidedown">
+        <div class="overlay overlay-slidedown">
 			<button type="button" class="overlay-close">Close</button>
-			<nav>
-				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Work</a></li>
-					<li><a href="#">Clients</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
-			</nav>
-		</div>
+
+           {% block modal %}
+               {% include 'index/modal.html' %}
+           {% endblock %}
+
+        </div>
 		<script src='{% static "js/classie.js" %}'></script>
 		<script src='{% static "js/main.js" %}'></script>
         <script src='{% static "js/demo1.js" %}'></script>
