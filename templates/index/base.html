@@ -16,6 +16,7 @@
 		<link rel="stylesheet" type="text/css" href='{% static "css/style1.css" %}' />
         <link rel="stylesheet" type="text/css" href='{% static "css/style3.css" %}' />
         <link rel="stylesheet" type="text/css" href='{% static "css/demo.css" %}' />
+        <link rel="stylesheet" type="text/css" href='{% static "css/style.css" %}' />
 		<script src='{% static "js/modernizr.custom.js" %}'></script>
 	</head>
 	<body>
@@ -65,9 +66,9 @@
         <div class="overlay overlay-slidedown">
 			<button type="button" class="overlay-close">Close</button>
 
-           {% block modal %}
+
                {% include 'index/modal.html' %}
-           {% endblock %}
+
 
         </div>
 		<script src='{% static "js/classie.js" %}'></script>
