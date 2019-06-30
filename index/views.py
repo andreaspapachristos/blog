@@ -7,12 +7,12 @@ from django.views.generic import ListView, CreateView
 # Create your views here.
 
 
-def home(request):
-    context = {
-        'posts': Post.objects.all().order_by('-date_posted')
-    }
-
-    return render(request, 'index/article.html', context)
+# def home(request):
+#     context = {
+#         'posts': Post.objects.all().order_by('-date_posted')
+#     }
+#
+#     return render(request, 'index/article.html', context)
 
 
 class PostListView(ListView):

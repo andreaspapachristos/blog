@@ -25,7 +25,7 @@
 	z-index: 100;
 }
 
-/* Menu style */
+/* Menu style
 .overlay nav {
 	text-align: center;
 	position: relative;
@@ -65,7 +65,7 @@
 .overlay ul li a:hover,
 .overlay ul li a:focus {
 	color: #e3fcb1;
-}
+}*/
 
 /* Effects */
 .overlay-slidedown {
