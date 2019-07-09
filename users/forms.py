@@ -15,17 +15,17 @@ class UserRegisterForm(UserCreationForm):
                                                              'name': 'username',
                                                              'placeholder': 'username',
                                                              'required': ''}))
-    password1 = forms.PasswordInput(widget=forms.TextInput(attrs={'class': 'text ',
-                                                                  'type': 'password',
-                                                                  'name': 'password',
-                                                                  'placeholder': 'password',
-                                                                  'required': ''}))
+    password1 = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'text ',
+                                                                      'type': 'password',
+                                                                      'name': 'password',
+                                                                      'placeholder': 'password',
+                                                                      'required': ''}))
 
-    password2 = forms.PasswordInput(widget=forms.TextInput(attrs={'class': 'text w3lpass',
-                                                                  'type': 'password',
-                                                                  'name': 'password',
-                                                                  'placeholder': 'confirm password',
-                                                                  'required': ''}))
+    password2 = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'text w3lpass',
+                                                                      'type': 'password',
+                                                                      'name': 'password',
+                                                                      'placeholder': 'confirm password',
+                                                                      'required': ''}))
 
     class Meta:
         model = User
