@@ -16,16 +16,16 @@ class UserRegisterForm(UserCreationForm):
                                                              'placeholder': 'username',
                                                              'required': ''}))
     password1 = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'text ',
-                                                                      'type': 'password',
-                                                                      'name': 'password',
-                                                                      'placeholder': 'password',
-                                                                      'required': ''}))
+                                                                  'type': 'password',
+                                                                  'name': 'password',
+                                                                  'placeholder': 'password',
+                                                                  'required': ''}))
 
     password2 = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'text w3lpass',
-                                                                      'type': 'password',
-                                                                      'name': 'password',
-                                                                      'placeholder': 'confirm password',
-                                                                      'required': ''}))
+                                                                  'type': 'password',
+                                                                  'name': 'password',
+                                                                  'placeholder': 'confirm password',
+                                                                  'required': ''}))
 
     class Meta:
         model = User
