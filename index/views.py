@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from .models import Post
+from .models import Post, User
 from  django.http.response import HttpResponse
 from django.views.generic import ListView, CreateView
 from users.views import UserRegisterForm
@@ -24,17 +24,21 @@ class PostListView(ListView):
     context_object_name = 'posts'
     ordering = ['-date_posted']
 
-    def post(self, request):
-        if request.method == 'POST':
-            form = UserRegisterForm(request.POST)
-            if form.is_valid():
-                form.save()
-                username = form.cleaned_data.get('username')
 
-                return HttpResponse()
-        else:
-            form = UserRegisterForm()
-        return render(request, 'users/modal.html', {'form': form})
+def modal(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        email = request.POST['email']
+        password = request.POST['password']
+
+        user = User.objects.create(
+                username=username,
+                email=email,
+                password=password
+            )
+        user.save()
+        return HttpResponse()
+
 
 
 
