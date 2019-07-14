@@ -75,8 +75,8 @@
 				<form action="#" method="post" id="newuser">{% csrf_token %}
 					<input class="text" type="text" name="Username" placeholder="Username" required="">
 					<input class="text email" type="email" name="email" placeholder="Email" required="">
-					<input class="text" type="password" name="password" placeholder="Password" required="">
-					<input class="text w3lpass" type="password" name="password1" placeholder="Confirm Password" required="">
+					<!--<input class="text" type="password" name="password" placeholder="Password" required="">
+					--><input class="text w3lpass" type="password" name="password1" placeholder="Confirm Password" required="">
 					<div class="wthree-text">
 						<label class="anim">
 							<input type="checkbox" class="checkbox" required="">
@@ -104,8 +104,10 @@
                     password: $('input[name=password1]').val(),
                     csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()
                 },
-                success: function () {
-                    alert('ok')
+                success: function (data1) {
+                    if(data1.exists){
+                        alert(data1.error_message);
+                    }
                 }
             });
         }));
