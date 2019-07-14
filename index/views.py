@@ -40,6 +40,7 @@ def modal(request):
             return JsonResponse(data1)
         elif data1["min_length"]:
             data1['error_message'] = 'Password must be at least 8 characters'
+            return JsonResponse(data1)
         elif data1['email_format']:
             data1['error_message'] = 'Not a valid email'
 

@@ -17,8 +17,8 @@
         <link rel="stylesheet" type="text/css" href='{% static "css/style3.css" %}' />
         <link rel="stylesheet" type="text/css" href='{% static "css/demo.css" %}' />
         <link rel="stylesheet" type="text/css" href='{% static "css/style.css" %}' />
-
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
 
 
 		<script src='{% static "js/modernizr.custom.js" %}'></script>
@@ -95,6 +95,7 @@
         $(document).on('submit', '#newuser', (function (e) {
             e.preventDefault();
 
+
             $.ajax({
                 type: 'POST',
                 url: 'modal/',
@@ -105,11 +106,12 @@
                     csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()
                 },
                 success: function (data1) {
-                    if(data1.exists){
+                    if(data1.min_length){
                         alert(data1.error_message);
                     }
                 }
             });
+
         }));
 
     </script>
