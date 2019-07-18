@@ -38,11 +38,6 @@ def modal(request):
         if data1['exists']:
             data1['error_message'] = 'A user with this username already exists.'
             return JsonResponse(data1)
-        elif data1["min_length"]:
-            data1['error_message'] = 'Password must be at least 8 characters'
-            return JsonResponse(data1)
-        elif data1['email_format']:
-            data1['error_message'] = 'Not a valid email'
 
         else:
 

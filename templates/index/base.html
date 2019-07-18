@@ -17,6 +17,7 @@
         <link rel="stylesheet" type="text/css" href='{% static "css/style3.css" %}' />
         <link rel="stylesheet" type="text/css" href='{% static "css/demo.css" %}' />
         <link rel="stylesheet" type="text/css" href='{% static "css/style.css" %}' />
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
         <script>
@@ -89,7 +90,8 @@
 						</label>
 						<div class="clear"> </div>
 					</div>
-					<input type="submit" value="SIGNUP">
+                    <div class="g-recaptcha" data-sitekey="6LdPAq4UAAAAAAQGL1iR5FjhVukiRHCSwN3O-rXr" data-callback="enableBtn"></div>
+					<input type="submit" value="SIGNUP" disabled id="btn">
 				</form>
 				<p>Don't have an Account? <a href="#"> Login Now!</a></p>
 			</div>
@@ -99,13 +101,16 @@
 		</div>
         </div>
           <script>
+          var enableBtn = function () {
+              $('#btn').removeAttr('disabled');
+
+          }
 
         if(($('#newuser').validate())){
 
 
         $(document).on('submit', '#newuser', (function (e) {
             e.preventDefault();
-
 
             $.ajax({
                 type: 'POST',

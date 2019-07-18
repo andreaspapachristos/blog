@@ -135,6 +135,11 @@ h1 {
     padding: 3em 0 1em;
 }
 
+.g-recaptcha{
+background: #fff!important;
+color: #fff!important; }
+
+
 .main-agileinfo {
     width: 35%;
     margin: 3em auto;

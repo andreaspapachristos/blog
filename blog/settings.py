@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bootstrap_modal_forms',
+    'snowpenguin.django.recaptcha2',
 ]
 
 MIDDLEWARE = [
@@ -148,3 +149,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+RECAPTCHA_PRIVATE_KEY = '6LdPAq4UAAAAAG76yU8hksQOpzUG2z4BBQE8tSNX'
+RECAPTCHA_PUBLIC_KEY = '6LdPAq4UAAAAAAQGL1iR5FjhVukiRHCSwN3O-rXr'
