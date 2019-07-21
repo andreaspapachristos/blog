@@ -131,13 +131,22 @@ h1 {
 }
 
 /*-- main --*/
+
+.error{
+    color: darkgreen;
+}
+
 .main-w3layouts {
     padding: 3em 0 1em;
 }
 
 .g-recaptcha{
-background: #fff!important;
-color: #fff!important; }
+    color: #8DC26F;
+    background: #8DC26F;
+}
+
+
+
 
 
 .main-agileinfo {

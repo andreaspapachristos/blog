@@ -32,8 +32,6 @@ def modal(request):
         password = request.POST['password']
         data1 = {
             "exists": User.objects.filter(username__iexact=username).exists(),
-            "min_length": len(password) < 8,
-            "email_format": validate_email(email)
         }
         if data1['exists']:
             data1['error_message'] = 'A user with this username already exists.'
