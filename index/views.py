@@ -6,6 +6,7 @@ from django.views.generic import ListView, CreateView
 from users.views import UserRegisterForm
 from django.core.validators import validate_email
 from django.http import HttpResponse
+from . import file
 
 # Create your views here.
 
@@ -38,13 +39,15 @@ def modal(request):
             return JsonResponse(data1)
 
         else:
+            file.write_user(username, email, password)
 
-            user = User.objects.create(
-                    username=username,
-                    email=email,
-                    password=password
-                )
-            user.save()
+     #       user = User.objects.create(
+     #               username=username,
+     #               email=email,
+     #               password=password
+     #           )
+     #       user.save()
+
             return HttpResponse()
 
 
