@@ -10,6 +10,7 @@ from . import file
 
 # Create your views here.
 
+#αλλαγή σε class based views απο function based views
 
 # def home(request):
 #     context = {
@@ -27,6 +28,7 @@ class PostListView(ListView):
 
 
 def modal(request):
+# η μέθοδος είναι η POST αλλά καθορίζεται από το js κώδικα (ajax) οπότε και είναι περιττο το if
   #  if request.method == 'POST':
 
         try:
@@ -36,6 +38,7 @@ def modal(request):
             data1 = {
                 "exists": User.objects.filter(username__iexact=username).exists(),
                     }
+            #πραγματοποιεί έλεγχο αν υπάρχει ήδη χρήστης με το ίδιο username. Ο έλεγχος γίνεται ασύγχρονα οπότε και το αποτέλεσμα επιστρέφει κατόπιν του submit
             if data1['exists']:
                 data1['error_message'] = 'A user with this username already exists.'
                 return JsonResponse(data1)
@@ -43,12 +46,15 @@ def modal(request):
             else:
                 file.write_user(username, email, password)
                 return redirect('/')
+#η κανονική λειτουργία της σελιδας θα δημιουργεί τον χρήστη στην βάση με τον παρακάτω κώδικα, προς στιγμήν απλά κρατάω τις εγγραφες σε ένα αρχείο για δοκιμή.
          #       user = User.objects.create(
          #               username=username,
          #               email=email,
          #               password=password
          #           )
          #       user.save()
+
+        # σε περίπτωση keyerror καταχωρεί default τιμές
         except KeyError:
             username = 'andreas'
             email = 'admin@linuxdude.gr'

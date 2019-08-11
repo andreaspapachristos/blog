@@ -24,8 +24,9 @@ from index import views as index_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/', user_views.register, name='register'),
-    path('modal/', index_views.modal, name='modal'),
+ #   path('modal/', index_views.modal, name='modal'),
     path('', include('index.urls')),
+    path('modal/', include('index.urls')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
