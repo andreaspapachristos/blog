@@ -85,7 +85,7 @@
 					--><input class="text w3lpass" type="password" name="password1" placeholder="Confirm Password" required="" minlength="8">
 					<div class="wthree-text">
 						<label class="anim">
-							<input type="checkbox" class="checkbox" required="">
+							<input type="checkbox" class="checkbox" required="" value="1" name="terms">
 							<span>I Agree To The Terms & Conditions</span>
 						</label>
 						<div class="clear"> </div>
@@ -103,12 +103,12 @@
           <script>
 
 
-
+                    let validator = $('#newuser').validate()
 
 
                     $(document).on('submit', '#newuser', (function (e) {
                         e.preventDefault();
-
+                    if (validator.valid()){
                     $.ajax({
                         type: 'POST',
                         url: 'modal/',
@@ -129,7 +129,7 @@
                             }
                     });
 
-            }));
+            }}));
 
     </script>
 		<script src='{% static "js/classie.js" %}'></script>
