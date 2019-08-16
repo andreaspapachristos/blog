@@ -132,7 +132,7 @@ h1 {
 
 /*-- main --*/
 
-.error{
+.error, .checkbox.error{
     color: darkgreen;
 }
 
