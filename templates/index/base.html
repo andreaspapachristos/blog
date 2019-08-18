@@ -43,7 +43,7 @@
 -->
 				<div class="related">
 					<h3>Related Demos</h3>
-					<a id="trigger-overlay" href="#">CV</a>
+					<a id="trigger-overlay" href="#">Register</a>
 					<a href="http://tympanus.net/Tutorials/ThumbnailGridExpandingPreview/">Thumbnail Grid</a>
 					<a href="http://tympanus.net/Development/3DGridEffect/">3D Grid Effect</a>
 				</div>
@@ -93,7 +93,7 @@
 
 					<input type="submit" value="SIGNUP"  id="btn">
 				</form>
-				<p>Don't have an Account? <a href="#"> Login Now!</a></p>
+				<p>Don't have an Account? <a href="#" id="login"> Login Now!</a></p>
 			</div>
                <script>
 
@@ -132,6 +132,24 @@
             }}));
 
     </script>
+        <script>
+         $('#login').click(function(e) {
+             e.preventDefault()
+                $('input[name=email], .wthree-text').hide();
+                $('#btn').attr('value', 'Login');
+                $.ajax({
+                    type: 'POST',
+                    url: 'login/',
+                    data: {
+                        username: $('input[name=Username]').val(),
+                        password: $('input[name=password1]').val(),
+                        csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()
+                    },
+                    success: $('#newuser')[0].reset()
+                });
+
+            })
+        </script>
 		<script src='{% static "js/classie.js" %}'></script>
 		<script src='{% static "js/main.js" %}'></script>
         <script src='{% static "js/demo1.js" %}'></script>
