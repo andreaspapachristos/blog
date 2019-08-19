@@ -93,7 +93,7 @@
 
 					<input type="submit" value="SIGNUP"  id="btn">
 				</form>
-				<p>Don't have an Account? <a href="#" id="login"> Login Now!</a></p>
+				<p>Already have an Account? <a href="#" id="login"> Login Now!</a></p>
 			</div>
                <script>
 
@@ -137,6 +137,7 @@
              e.preventDefault()
                 $('input[name=email], .wthree-text').hide();
                 $('#btn').attr('value', 'Login');
+
                 $.ajax({
                     type: 'POST',
                     url: 'login/',
