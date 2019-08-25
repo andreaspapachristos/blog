@@ -9,3 +9,4 @@ def write_user(username, email, password):
     file.write(email + "\n")
     file.write("\n")
     file.close()
+

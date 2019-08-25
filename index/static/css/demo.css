@@ -77,13 +77,14 @@ a:hover, a:focus {
 	float: left;
 }
 
+
 .codrops-icon:before {
 	margin: 0 4px;
 	text-transform: none;
 	font-weight: normal;
 	font-style: normal;
 	font-variant: normal;
-	font-family: 'codropsicons';
+	font-family: 'Lato', fantasy;
 	line-height: 1;
 	speak: none;
 	-webkit-font-smoothing: antialiased;
